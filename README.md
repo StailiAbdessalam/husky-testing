@@ -1,8 +1,12 @@
-# some husky order
+![test](https://res.cloudinary.com/practicaldev/image/fetch/s--5mm5VeUB--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v67mrvpgrqg19k3ifgll.png)
 ## ✅ 1_installing husky 
+```bash
 npx husky-init && npm install
+```
 ## ✅ 2_installing lint-staged prettier
+```bash
 yarn add --dev lint-staged prettier
+```
 ## ✅ 3_add this code a package-json
 ```bash
 "lint-staged":{
@@ -13,10 +17,23 @@ yarn add --dev lint-staged prettier
     ]
   }
 ```
-### 3_to avoid testing commit
-git commit -m "Add link-staged" --no-verify
+## ✅ 4_test lint-staged
+```bash
+yarn lint-staged
+```
+## to avoid testing commit
+```bash
+git commit -m "your commit" --no-verify
+```
 ### to mixing a nother bransh 
+```bash
 npx husky add .husky/post-merge 'yarn'
+```
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
