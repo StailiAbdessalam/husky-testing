@@ -1,3 +1,8 @@
+# some husky order
+### to avoid testing commit
+git commit -m "Add link-staged" --no-verify
+### to mixing a nother bransh 
+npx husky add .husky/post-merge 'yarn'
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
