@@ -1,3 +1,22 @@
+# some husky order
+## ✅ 1_installing husky 
+npx husky-init && npm install
+## ✅ 2_installing lint-staged prettier
+yarn add --dev lint-staged prettier
+## ✅ 3_add this code a package-json
+```bash
+"lint-staged":{
+    "**/*.{js,jsx,ts,tsx}":[
+      "yarn eslint",
+      "yarn prettier --write",
+      "yarn tset --watchAll=false --findRelatedTests"
+    ]
+  }
+```
+### 3_to avoid testing commit
+git commit -m "Add link-staged" --no-verify
+### to mixing a nother bransh 
+npx husky add .husky/post-merge 'yarn'
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
